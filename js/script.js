@@ -61,15 +61,15 @@ function getRandomQuote() {
 function printQuote() {
   const quote = getRandomQuote();
 
-  const displayQuote = `<p class="quote">${quote.quote}</p>
+  let displayQuote = `<p class="quote">${quote.quote}</p>
   <p class="source">${quote.source}`;
 
   if(quote.citation) {
-    displayQuote.concat('<span class="citation"> quote citation </span>')
+    displayQuote += `<span class="citation">${quote.citation}</span>`
   }
 
   if(quote.year) {
-    displayQuote.concat('<span class="year"> quote year </span>')
+    displayQuote += `<span class="year">${quote.year}</span>`
   }
 
   displayQuote.concat('</p>')
