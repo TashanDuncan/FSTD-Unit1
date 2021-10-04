@@ -103,6 +103,8 @@ function printQuote() {
   randomBackgroundColor();
 }
 
+//Auto-refreshed quotes
+setInterval(printQuote,20000)
 
 /***
  * click event listener for the print quote button
